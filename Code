@@ -1,0 +1,22 @@
+int x=13;
+int y=12;
+int z=11;
+int a;
+
+void setup(){
+    pinMode(x,OUTPUT);
+    pinMode(y,OUTPUT);
+    pinMode(z,INPUT_PULLUP);
+}
+
+void loop(){
+    a=digitalRead(z);
+    if(a==LOW){
+        digitalWrite(x,HIGH);
+        digitalWrite(y,LOW);
+    }
+    else{
+        digitalWrite(x,LOW);
+        digitalWrite(y,HIGH);
+    }
+}
